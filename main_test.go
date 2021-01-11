@@ -32,7 +32,6 @@ func preflight() {
 			log.Fatal(err)
 		}
 	}
-
 }
 
 func TestMain(m *testing.M) {
