@@ -14,9 +14,10 @@ changelog:
     - Merge pull request
     - Merge branch
 builds:
-  env:
-    - CGO_ENABLED=0
   - binary: soba
+    env:
+    - CGO_ENABLED=0
+
     goos:
       - linux
       - windows
