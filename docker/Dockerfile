@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.14
 MAINTAINER Jon Hadfield <jon@lessknown.co.uk>
 
 ARG build_tag
