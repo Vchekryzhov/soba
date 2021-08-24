@@ -3,7 +3,7 @@
 before:
   hooks:
     - go mod tidy
-    - make
+    - make build
 builds:
   - binary: soba
   - env:
