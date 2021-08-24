@@ -4,9 +4,18 @@ env:
 before:
   hooks:
     - go mod tidy
-    - make build
-
+#    - make build
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+    - Merge pull request
+    - Merge branch
 builds:
+  env:
+    - CGO_ENABLED=0
   - binary: soba
     goos:
       - linux
