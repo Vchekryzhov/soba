@@ -5,6 +5,8 @@ jobs:
       - image: circleci/golang:1.16
     steps:
       - checkout
-      - run: pwd
-      - run: mkdir /apps/backup
+      - run: mkdir /home/circleci/project/backup
+      - run:
+          name: make git backups dir
+          command: mkdir /home/circleci/project/backup
       - run: go test -v -p 1 -parallel 1 -failfast ./...
