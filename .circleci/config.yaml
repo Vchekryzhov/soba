@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.16
+    steps:
+      - checkout
+      - mkdir /tmp/backup
+      - run: go test -v ./...
+  release:
+    docker:
+      - image: circleci/golang:1.16
