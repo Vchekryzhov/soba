@@ -5,6 +5,6 @@ jobs:
       - image: circleci/golang:1.16
     steps:
       - checkout
-      - run: cwd
+      - run: pwd
       - run: mkdir /apps/backup
       - run: go test -v -p 1 -parallel 1 -failfast ./...
