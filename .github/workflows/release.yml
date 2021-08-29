@@ -41,6 +41,7 @@ jobs:
       name: Docker Build & Push Action
       uses: mr-smithers-excellent/docker-build-push@v5.5
       with:
+        image: soba/soba
         registry: ghcr.io
         dockerfile: docker/Dockerfile
         username: ${{ github.repository_owner }}
